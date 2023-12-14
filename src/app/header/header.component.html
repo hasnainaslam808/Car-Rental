@@ -1,0 +1,71 @@
+<div class="contain-fluid">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="assets/images/header logo.png" alt="logo" width="160px" height="38px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link  me-5 " routerLink="home" [routerLinkActive]="'active'">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-5" routerLink="vehicle-listing" [routerLinkActive]="'active'">Vehicle Listing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-5" routerLink="contact-us" [routerLinkActive]="'active'">Contact Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link ">
+              <span *ngIf="isProfileIcon" style="margin-right: 10px;">
+                <img class="user-profile" src="assets/images/Profil.png" (click)="toggleMenu()" alt=""
+                  style="width: 30px;">
+                <div class="sub-menu-wrap open-menu" id="subMenu" #subMenu *ngIf="popupService.profilePopup">
+                  <div class="sub-menu">
+                    <div class="user-info">
+                      <img src="assets/images/Image (1).png">
+                      <div>
+                        <h4>Hasnain Aslam</h4>
+                        <p><a routerLink="/profile">Edit your profile</a></p>
+                      </div>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                      <img src="assets/images/Profile.png" alt="" width="20px" height="20px">
+                      <P><a routerLink="/profile">Profile</a></P>
+                      <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                      <img src="assets/images/fav.png" alt="" width="20px" height="20px">
+                      <P><a routerLink="/favourite">Favourite</a></P>
+                      <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                      <img src="assets/images/history.png" alt="" width="20px" height="20px">
+                      <p><a routerLink="/history">History</a></p>
+                      <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                      <img src="assets/images/Exit.png" alt="" width="20px" height="20px">
+                      <P><a (click)="logOut()">Log out</a></P>
+                      <span>></span>
+
+                    </a>
+
+                  </div>
+
+                </div>
+              </span>
+              <span *ngIf="!isProfileIcon" routerLink="login-empty" id="sign-in">Sign In</span></a>
+          </li>
+
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,37 @@
+.footer{
+background-color: rgb(8, 22, 48);
+color: white;
+width: 100%;
+font-family: var(--plus);
+}
+#footer-text{
+    text-align:justify;
+}
+.footer img{
+    padding-top: 30px;
+    width: 150px;
+    color: white;
+}
+.footer p{
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer h5{
+    padding-top: 40px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.footer p{
+    font-size: 16px;
+    font-weight: 400;
+}
+hr{
+    width: 90%;
+   margin: 0 auto;
+  border: 1px solid rgb(255, 255, 255);
+}
+.copyright{
+    padding-bottom: 60px;
+}
+

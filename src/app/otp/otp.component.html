@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6  form-left">
+      <img src="../../assets/images/form-icon.png" alt="">
+    </div>
+    <div class="col-sm-6  form-right">
+      <img src="../../assets/images/icon.png" alt="icon">
+      <h4 class="pt-3">OTP Verification</h4>
+      <h6 class="text-muted">Please enter the OTP code we have send to your registered email</h6>
+      <form (ngSubmit)="otpSubmit()">
+        <!-- <div class="form-group">
+          <div id="inputs" class="inputs">
+
+            <input class="input" type="text" inputmode="numeric" maxlength="1" placeholder="3" />
+            <input class="input" type="text" inputmode="numeric" maxlength="1" placeholder="1" />
+            <input class="input" type="text" inputmode="numeric" maxlength="1" placeholder="9" />
+            <input class="input" type="text" inputmode="numeric" maxlength="1" placeholder="6" />
+            <input class="input" type="text" inputmode="numeric" maxlength="1" placeholder="0" />
+          </div>
+        </div> -->
+        <ngx-otp-input
+        [config]="otpInputConfig" (otpChange)="getOtpValue($event)"       
+        name="otp"  >
+
+        </ngx-otp-input>
+
+        <h5 class="text-center mt-3 otp-timer">{{ formattedTime }}</h5>
+        <button type="submit" class="btn btn-primary w-100 mt-3" [disabled]="disableContinueButton">Continue</button>
+        <h6 class="text-center mt-3"><a href="#">Resend</a></h6>
+      </form>
+    </div>
+  </div>
+</div>

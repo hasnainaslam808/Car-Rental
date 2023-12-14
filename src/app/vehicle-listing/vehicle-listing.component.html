@@ -1,0 +1,161 @@
+<div class="container-fluid vehicle-listing">
+  <div class="row">
+    <div class="col-md-3 left-form">
+      <button class="btn" (click)="toggleFilter()"><img src="../../assets/images/filter 2.png" alt="" width="45px"
+          height="45px"></button>
+      <form class="form" #filter>
+        <div class="input mt-3">
+          <label for="validationCustom01">Make</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>select maker</option>
+            <option value="1">Honda</option>
+            <option value="2">Toyota</option>
+            <option value="3">Kia</option>
+          </select>
+
+
+          <label for="validationCustom02" class="mt-3">Model</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>select model</option>
+            <option value="1">2023</option>
+            <option value="2">2022</option>
+            <option value="3">2021</option>
+          </select>
+
+
+          <label for="customRange3" class="mt-3">Price Range per day(pkr)</label>
+          <input type="range" class="form-range" min="0" max="1" id="customRange3">
+          <p class="text-muted">Minimum range 50,000 Rs <br> Maximum range 500M Rs</p>
+
+
+
+
+          <label for="validationCustom03" class="mt-3">Registration City</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>All</option>
+            <option value="1">Lahore</option>
+            <option value="2">Karachi</option>
+            <option value="3">Islamabad</option>
+          </select>
+
+
+          <label for="validationCustom04" class="mt-3">Car Document</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>All</option>
+            <option value="1">2023</option>
+          </select>
+
+
+          <label for="validationCustom05" class="mt-3">Transmission</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>All</option>
+            <option value="1">Manual</option>
+            <option value="2">Auto</option>
+          </select>
+
+
+          <label for="validationCustom04" class="mt-3">Condition</label><br>
+          <button class="btn">New</button>
+          <button class="btn">Used</button>
+          <br>
+          <label for="validationCustom04" class="form-label mt-3">Fuel</label>
+          <br>
+          <button class="btn">Petrol</button>
+          <button class="btn">Disel</button>
+          <button class="btn">LPG</button>
+          <button class="btn">CNG</button>
+          <button class="btn">Electric</button>
+          <button class="btn">Hybrid</button>
+
+
+        </div><!--input-->
+        <button class="btn btn-primary w-100 p-2 mt-3">Apply</button>
+      </form>
+    </div>
+
+    <!--listing div-->
+    <div class="col-md-9  cards mt-2">
+      <div class="card-item" *ngFor="let car of carsList">
+        <div class="text">
+          <h4>{{car.carName}} </h4>
+          <p>{{car.description}} </p>
+        </div><br>
+        <div class="like-btn"><input style="display: none;" type="checkbox" checked="checked" id="favorite" name="favorite-checkbox"
+            value="favorite-button">
+          <label for="favorite" class="container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-heart">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+              </path>
+            </svg>
+    
+          </label>
+        </div>
+        <br><br><br>
+        <div class="car">
+          <img src="{{car.imgUrl}}" alt="" width="215px" height="108">
+        </div><br>
+        <div class="card-detail">
+          <div class="test">
+            <img src="assets/images/gas-station.png" alt="gas station">
+            <p>{{car.fuel}}L</p>
+          </div>
+          <div class="test">
+            <img src="assets/images/Car (3).png" alt="manuall">
+            <p>{{car.machinery}}</p>
+          </div>
+          <div class="test">
+            <img src="assets/images/profile-2user.png" alt=" seats">
+            <p>{{car.people}} People</p>
+          </div>
+        </div>
+        <div class="card-price">
+          <p>
+            <span class="small-text">pkr. </span>
+            <span class="bold-text">{{car.price}}/</span>
+            <span class="grey-text">day </span>
+            <button class="btn btn-primary" routerLink="/car-detail">Rent Now</button>
+          </p>
+    
+        </div>
+      </div>
+      <!-- <div class="card-item">
+        <div class="text">
+          <h4>Swift Suzuki 2023 </h4>
+          <p>sports </p>
+        </div><br>
+        <div class="like-btn"><img src="assets/images/Like.png" alt="">
+        </div>
+        <div class="car">
+          <img src="assets/images/car.png" alt="" width="215px" height="108">
+        </div><br>
+        <div class="card-detail">
+          <div class="test">
+            <img src="../../assets/images/gas-station.png" alt="gas station">
+            <p>90L</p>
+          </div>
+          <div class="test">
+            <img src="assets/images/Car (3).png" alt="manuall"> 
+            <p>Manual</p>
+          </div>
+          <div class="test">
+            <img src="assets/images/profile-2user.png" alt=" seats">
+            <p>4 People</p>
+          </div>
+        </div>
+        <div class="card-price">
+          <p>
+            <span class="small-text">pkr. </span>
+            <span class="bold-text">7000/</span>
+            <span class="grey-text">day </span>
+            <button routerLink='/car-detail' class="btn btn-primary">Rent Now</button>
+          </p>
+
+        </div>
+
+      </div>cards main div -->
+    </div>
+  </div>
+</div>

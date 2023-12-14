@@ -1,0 +1,98 @@
+
+/*
+profile
+*/
+.bg-div{
+    background-color: rgb(245, 246, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: var(--plus);
+  }
+  .bg-div label{
+      font-weight: 600;
+  }
+  .profile{
+      background-color: white;
+      margin: 20px 20px;
+      border-radius: 12px;
+  }
+  .profile input[type="text"],[type="password"],[type="email"],[type="tel"]{
+      background-color: rgb(245, 246, 247);
+  }
+  .profile input[type="file"]{
+      display: none;
+  }
+  /* .documents input[type="file"]{
+      display: none;
+  } */
+  .upload-img{
+      /* height: 30px; */
+      margin-left: 15px;
+      padding: 8px 0;
+      Width:130px;
+      background-color: rgba(53, 99, 233, 1);
+      position: static;
+     color: white;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  @media (max-width: 340px) {
+      .upload-img{
+          margin-top: 20px;
+      }
+  }
+  
+  .phone input[type=tel]{
+      border-left: none;
+  }
+  .phone button{
+      border-right:none ;
+      border-top: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;
+      background-color: white;
+      border-radius: 4px;
+    }
+  
+   .male{
+      padding-right: 15px;
+    padding-left: 5px;
+    }
+    .female{
+      padding-right: 15px;
+    padding-left: 18px;
+    }
+    @media (max-width: 880px) {
+    .male{
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    .female{
+      padding-right: 5px;
+    padding-left: 8px;
+    }
+    }
+   
+  
+    .licence-img{
+      background-color: rgb(245, 246, 247);
+      /* color: rgba(128, 141, 158, 1) ; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    }
+    .documents{
+      background-color: white;
+      margin: 20px 20px;
+      border-radius: 12px;
+  }
+  .documents input[type=text]{
+      background-color: rgb(245, 246, 247);
+  }

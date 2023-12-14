@@ -1,0 +1,10 @@
+
+.main-container{
+    background-color: rgb(245, 246, 247);
+}
+.favourite{
+    background-color: white;
+    margin: 25px 40px;
+    padding: 10px;
+    font-weight: 600;
+}

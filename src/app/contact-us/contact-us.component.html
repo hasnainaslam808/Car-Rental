@@ -1,0 +1,79 @@
+
+    <!--contact us-->
+
+    <div class="container-fluid bg-div ">
+        <div class="documents ">
+            <div class="container-fluid ">
+                <div class="row ">
+                    <div class="col-md-4  contact-info">
+                        <div>
+                            <h3>Contact Information</h3>
+                            <p id="para">Fill up the form and our team will get back to you in 24 hours</p>
+                            <div class="info-flex pt-5">
+                                <img src="assets/images/Frame.png" alt="phone" width="35px" height="35px">
+                                <p>03136193728</p>
+                            </div>
+                            <div class="info-flex">
+                                <img src="assets/images/Frame (1).png" alt="phone" width="35px" height="35px">
+                                <p>hasnain @gmail.com</p>
+                            </div>
+                            <div class="info-flex">
+                                <img src="assets/images/Vector (1).png" alt="phone" width="30px" height="35px">
+                                <p>DevCastle officers colony RYK</p>
+                            </div>
+                        </div>
+                        <img id="right-bottom" src="assets/images/Ellipse 48 (1).png" alt="" width="55%">
+                        <img id="right-bottom" src="assets/images/Ellipse 47.png" alt="" width="40%">
+                    </div>
+
+
+
+                    <div class="col-md-7 mt-5 message">
+                        <div>
+                            <form class="row g-3" #contactUsForm="ngForm" (ngSubmit)="submitMessage(contactUsForm.value)">
+                                <div class="col-md-6">
+                                    <label for="inputfname" class="form-label">First Name</label>
+                                    <input type="fname" #fname="ngModel" class="form-control" name="firstName" pattern="[a-zA-Z]+$" ngModel required>
+                                    <span *ngIf="fname.invalid && fname.touched " class="text-danger" style="font-size: 12px;">Enter Valid Name</span>
+                                    <br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputlname" class="form-label">Last Name</label>
+                                    <input type="lname" #lname="ngModel" class="form-control" name="lastName" pattern="[a-zA-Z]+$" ngModel required>
+                                    <span *ngIf="lname.invalid && lname.touched " class="text-danger" style="font-size: 12px;">Enter Valid Name</span>
+                                    <br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputEmail4" class="form-label">Mail</label>
+                                    <input type="email" #email="ngModel" class="form-control" name="email" email ngModel required>
+                                    <span *ngIf="email.invalid && email.touched " class="text-danger" style="font-size: 12px;">Enter Valid Email</span>
+                                    <br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPhone" class="form-label">Phone </label>
+                                    <input type="phone" #phone="ngModel" class="form-control"  name="phone" maxlength="12" minlength="10" pattern="03[0-9]{2}-[0-9]{7}" required ngModel>
+                                    <span *ngIf="phone.invalid && phone.touched " class="text-danger" style="font-size: 12px;">Enter Valid Number(0300-1234567)</span>
+                                    <br>
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control" rows="10"
+                                        placeholder="Write your message..." name="message" #message="ngModel"  ngModel required></textarea>
+                                        <span *ngIf="message.invalid && message.touched " class="text-danger" style="font-size: 12px;">Enter Your Message</span>
+                                        <br>
+                                </div>
+                                <button type="submit" class="btn btn-primary " [disabled]="contactUsForm.invalid">Get a Quote</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                </div><!--row-->
+            </div><!--container fluid-->
+
+
+        </div><!--documents-->
+
+
+    </div><!--main container-->

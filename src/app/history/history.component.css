@@ -1,0 +1,107 @@
+.main-container{
+    background-color: rgb(245, 246, 246);
+}
+.history{
+    margin: 25px 40px;
+    font-weight: 600;
+    text-align: center;
+}
+.history p{
+    color: rgba(144, 163, 191, 1);
+}
+
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+.card-item{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+box-sizing: border-box;
+padding: 10px;
+margin: 10px;
+background-color: rgb(255, 255, 255);
+}
+.card-item h4{
+    font-family: var(--plus);
+}
+.card-item .text{
+    float: left;
+    margin-left: 10px;
+}
+.card-detail{
+    color: rgba(144, 163, 191, 1);
+    font-size: 14px;
+    display: flex; 
+    align-items: center; 
+    width: 300px;
+}
+.card-detail img{
+ margin-left: 5px;
+}
+
+.test{
+    display: flex;
+    width: 100%;
+    gap: 4px;
+}
+.test img{
+    max-height: 20px;
+}
+@media (max-width: 850px) {
+    .car {
+        float: left;
+    }
+    .card-detail{
+        width: 180px;
+    }
+    .card-item{
+        width: 328px;
+    }
+    .card-detail {
+      /* float: right;  */
+      display: flex;
+      flex-direction: column;
+      /* gap: 8px; */
+      /* justify-content: space-between;
+      width:90px; */
+      margin-left: 20px;
+    }
+   
+  }
+  /* @media (max-width: 374px) {
+    .car img {
+        width: 180px;
+    }
+   
+  } */
+
+.rerent button{
+/* background-color: rgba(44, 182, 125, 1); */
+color: white;
+padding: 5px 25px 5px 25px;
+float: right;
+}
+.rerent h5{
+    font-size: 18px;
+    font-weight: 900;
+    font-family: var(--popins);
+}
+.rerent p{
+    font-weight: 500;
+    color: rgba(144, 163, 191, 1);
+    font-size: 16px;
+}
+ngb-rating{
+    color: #ffc107;
+    font-size: 40px;
+}
+#cancelModal .modal-dialog {
+    width: 305px; /* Set the width to 322px */
+    border-radius: 30px; /* Set the border radius to 30px */
+  }
+
+  #cancelModal .modal-content {
+    border-radius: 30px; /* Set the border radius to 30px */
+  }

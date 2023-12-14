@@ -1,0 +1,265 @@
+/* * {
+  overflow: hidden;
+} */
+.viewAll{
+  float: right;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popular{
+  color:  rgba(144, 163, 191, 1);
+  text-decoration: none;
+}
+/* .parent h1 {
+  text-align: center;
+  font-family: var(--popins);
+  font-weight: 600;
+}
+
+.parent h3{
+  color: rgb(53, 100, 233);
+  font-weight: 600;
+  font-family: var(--popins);
+}
+
+.parent p{
+  font-weight: 400;
+  font-family: var(--roboto);
+
+} */
+
+
+
+
+
+.parent {
+  position: relative!important;
+}
+
+.fav-icon {
+  position: absolute;
+  z-index: 111;
+  left: 205px;
+  top: 29px;
+
+}
+
+
+.like-btn img{
+  margin-right: 10px;
+  margin-top: -20px;
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+}
+.card-item{
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+box-sizing: border-box;
+padding: 10px;
+margin: 10px;
+background-color: rgb(255, 255, 255);
+}
+.card-item h4{
+  font-family: var(--plus);
+}
+.card-item .text{
+  float: left;
+  margin-left: 10px;
+}
+.like-btn{
+  float: right;
+}
+.card-detail{
+  color: rgba(144, 163, 191, 1);
+  font-size: 14px;
+  display: flex; 
+  align-items: center; 
+}
+.card-detail img{
+margin-left: 5px;
+}
+.card-price{
+  margin: 20px;
+  clear: both;
+  position: relative;
+}
+.card-price button{
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  position: relative;
+}
+.card-price p{
+  font-weight: 700;
+}
+.card-price .small-text{
+  font-size: 14px;
+}
+.card-price .bold-text{
+  font-size: x-large;
+  margin: 0 5px;
+}
+.card-price .grey-text{
+  color:rgba(144, 163, 191, 1);
+ 
+}
+.test{
+  display: flex;
+  width: 100%;
+  gap: 4px;
+}
+.test img{
+  max-height: 20px;
+}
+@media (max-width: 850px) {
+  .car {
+      float: left;
+  }
+  .card-item{
+      width: 328px;
+  }
+  .card-detail {
+    float: right; 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    width:90px;
+  }
+  .card-price button{
+      right:-50px;
+  }
+  .card-price .bold-text{
+   
+    margin: 0px -3px;
+  }
+}
+@media (max-width: 374px) {
+  .car img {
+      width: 160px;
+  }
+  .card-price button{
+      width: 80px;
+      height: 35px;
+      font-size:12px ;
+      right: -25px;
+  }
+}
+
+
+
+/* 
+input {
+  display: none;
+ }
+ 
+ input:checked + label svg {
+  fill: hsl(0deg 100% 50%);
+  stroke: hsl(0deg 100% 50%);
+  animation: heartButton 1s;
+ }
+ 
+ @keyframes heartButton {
+  0% {
+   transform: scale(1);
+  }
+ 
+  25% {
+   transform: scale(1.3);
+  }
+ 
+  50% {
+   transform: scale(1);
+  }
+ 
+ }
+ 
+  */
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner-form {
+  background-image: url("/assets/images/driver-1 1.png");
+  color: white;
+  font-weight: 400;
+}
+
+.banner-form {
+  padding: 40px;
+}
+
+.banner-form button {
+  background-color: rgb(33, 64, 142);
+  border: none;
+}
+
+.banner-form .input-group {
+  width: 50%;
+}
+
+.banner-form h5 {
+  font-family: var(--roboto);
+  padding-top: 30px;
+}
+
+.banner-form h1 {
+  font-family: var(--popins);
+}
+
+@media (max-width: 800px) {
+  .banner-form .input-group {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .banner-form .input-group {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner-form .input-group {
+    width: 80%;
+  }
+}
+
+.modelBackgroundImg{
+  background-image: url("../../assets/images/ecc.png");
+}

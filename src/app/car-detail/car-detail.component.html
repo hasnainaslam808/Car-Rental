@@ -1,0 +1,222 @@
+<div class="container-fluid main-div">
+    <div class="row">
+        <div class="col-lg-8">
+            <section class="gallery  mt-2">
+                <div class="container-fluid ">
+                    <div class="img-container">
+                        <div class="clickedImage">
+                            <img src="../../assets/images/image gallery 1.png" alt="image" id="preview">
+
+                            <div class="img-prev text-center">
+                                <div class="img-slide active">
+                                    <img src="../../assets/images/image gallery 1.png" alt="image1" appImageSlider>
+                                </div>
+                                <div class="img-slide">
+                                    <img src="../../assets/images/image gallery 2.png" alt="image2" appImageSlider>
+                                </div>
+                                <div class="img-slide">
+                                    <img src="../../assets/images/image gallery 3.png" alt="image3" appImageSlider>
+                                </div>
+                                <div class="img-slide">
+                                    <img src="../../assets/images/image gallery 2.png" alt="image4" appImageSlider>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-lg-4 car-detail ">
+            <div class="card-item ">
+                <div class="text">
+                    <h4>Swift Suzuki 2023 </h4>
+                    <div class="stars">★★★★★ <span class="text-black fw-bold"> 13+ Reviews</span></div>
+                </div><br>
+                <div class="like-btn"><input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox"
+                        value="favorite-button">
+                    <label for="favorite" class="container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-heart">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+
+                    </label>
+                </div><br><br><br>
+                <div>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta distinctio nobis pariatur dolor
+                    laborum eius!
+                </div><br>
+
+                <div class="option">
+                    <div class="item1">CarType</div>
+                    <div class="item2">Sport</div>
+                    <div class="item1">Capacity</div>
+                    <div class="item2">2 Person</div>
+                    <div class="item1">Steering</div>
+                    <div class="item2">Manual</div>
+                    <div class="item1">Gasoline</div>
+                    <div class="item2">55 L</div>
+                </div>
+
+                <div class="card-price">
+                    <p>
+                        <span class="small-text">pkr. </span>
+                        <span class="bold-text">4000/</span>
+                        <span class="grey-text">day </span>
+                        <button class="btn btn-primary" routerLink="/billing-information">Rent Now</button>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--reviews-->
+    <div class="container-fluid p-2 mt-3 reviews">
+        <div>
+            <h5>Reviews <span class="bg-primary text-white px-2 py-1 rounded"> 13</span></h5>
+        </div>
+        <div class="row">
+            <!--main review-->
+            <div *ngFor="let review of reviewList;let i = index">
+                <div *ngIf="showAllReviews || i < 2">
+                    <div class="review-container">
+                        <div class="user-info">
+                            <img src="../../assets/images/Profill.png" alt="Profile Pic" class="profile-pic">
+                            <div class="user-details">
+                                <h5>{{review.name}}</h5>
+                                <h6>{{review.description}}</h6>
+                            </div>
+                        </div>
+                        <div class="review-info">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-date">{{review.date}}</p>
+                        </div>
+                    </div>
+                    <div class="feedback">
+                        <p>{{review.feedback}}</p>
+                    </div>
+                </div>
+            </div>
+            <!--main review end-->
+
+
+            <p class="text-center"><a (click)="toggleReviews()">Show All &darr;</a></p>
+        </div>
+    </div>
+</div>
+<div class=" main-div">
+    <br><br>
+    <div>
+        <div class="container"><a href="#" class="popular">Recent Cars</a>
+            <a routerLink="/vehicle-listing" class="viewAll">View All</a>
+        </div>
+        <div class="container-fluid cards">
+            <div class="card-item" *ngFor="let car of recentCarList">
+                <div class="text">
+                    <h4>{{car.carName}}</h4>
+                    <p>{{car.description}} </p>
+                </div><br>
+                <div class="like-btn"><input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox"
+                        value="favorite-button">
+                    <label for="favorite" class="container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-heart">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+
+                    </label>
+                </div>
+                <br><br><br>
+                <div class="car">
+                    <img src="{{car.imgUrl}}" alt="" width="215px" height="108">
+                </div><br>
+                <div class="card-detail">
+                    <div class="test">
+                        <img src="../../assets/images/gas-station.png" alt="gas station">
+                        <p>{{car.fuel}}L</p>
+                    </div>
+                    <div class="test">
+                        <img src="../../assets/images/Car (3).png" alt="manuall">
+                        <p>{{car.machinery}}</p>
+                    </div>
+                    <div class="test">
+                        <img src="../../assets/images/profile-2user.png" alt=" seats">
+                        <p>{{car.people}} People</p>
+                    </div>
+                </div>
+                <div class="card-price">
+                    <p>
+                        <span class="small-text">pkr. </span>
+                        <span class="bold-text">{{car.price}}/</span>
+                        <span class="grey-text">day </span>
+                        <button class="btn btn-primary" routerLink="/car-detail">Rent Now</button>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div>
+        <div class="container"><a href="#" class="popular">Recomemded Cars</a>
+            <a routerLink="/vehicle-listing" class="viewAll">View All</a>
+        </div>
+        <div class="container-fluid cards">
+            <div class="card-item" *ngFor="let car of recomendedCarList">
+                <div class="text">
+                    <h4>{{car.carName}}</h4>
+                    <p>{{car.description}} </p>
+                </div><br>
+                <div class="like-btn"><input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox"
+                        value="favorite-button">
+                    <label for="favorite" class="container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-heart">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+
+                    </label>
+                </div>
+                <br><br><br>
+                <div class="car">
+                    <img src="{{car.imgUrl}}" alt="" width="215px" height="108">
+                </div><br>
+                <div class="card-detail">
+                    <div class="test">
+                        <img src="../../assets/images/gas-station.png" alt="gas station">
+                        <p>{{car.fuel}}L</p>
+                    </div>
+                    <div class="test">
+                        <img src="../../assets/images/Car (3).png" alt="manuall">
+                        <p>{{car.machinery}}</p>
+                    </div>
+                    <div class="test">
+                        <img src="../../assets/images/profile-2user.png" alt=" seats">
+                        <p>{{car.people}} People</p>
+                    </div>
+                </div>
+                <div class="card-price">
+                    <p>
+                        <span class="small-text">pkr. </span>
+                        <span class="bold-text">{{car.price}}/</span>
+                        <span class="grey-text">day </span>
+                        <button class="btn btn-primary" routerLink="/car-detail">Rent Now</button>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

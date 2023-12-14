@@ -1,0 +1,139 @@
+<app-banner-landing-page></app-banner-landing-page>
+
+
+
+<div class="container"><a href="#" class="popular">Popular Car</a>
+  <a routerLink="/vehicle-listing" class="viewAll">View All</a>
+</div>
+<div class="container-fluid cards">
+
+  <div class="card-item" *ngFor="let car of popularCarList">
+    <div class="text">
+      <h4 style="text-transform: capitalize;">{{car.carName}}</h4>
+      <p>{{car.carType}} </p>
+    </div><br>
+    <div class="like-btn">
+     
+      <img
+      [src]="showFavouriteImage ?  'assets/images/fill heart.webp' : 'assets/images/heart simple.png'"
+      (click)="toggleImage()"
+      alt="favoriteIcon" height="25px"
+    />
+      <!-- <input style="display: none;" type="checkbox" checked="checked" id="favorite" name="favorite-checkbox"
+        value="favorite-button">
+      <label for="favorite" class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-heart">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+          </path>
+        </svg>
+
+      </label> -->
+    </div>
+    <br><br><br>
+    <div class="car">
+      <img src="../../assets/images/car.png" alt="" width="215px" height="108">
+    </div><br>
+    <div class="card-detail">
+      <div class="test">
+        <img src="../../assets/images/gas-station.png" alt="gas station">
+        <p>{{car.fuelCapacity}}L</p>
+      </div>
+      <div class="test">
+        <img src="../../assets/images/Car (3).png" alt="manuall">
+        <p>{{car.steering}}</p>
+      </div>
+      <div class="test">
+        <img src="../../assets/images/profile-2user.png" alt=" seats">
+        <p>{{car.capacity}} People</p>
+      </div>
+    </div>
+    <div class="card-price">
+      <p>
+        <span class="small-text">pkr. </span>
+        <span class="bold-text">{{car.price}}/</span>
+        <span class="grey-text">day </span>
+   
+        <button class="btn btn-primary"  (click)="goNext( car)">Rent Now</button>
+      </p>
+
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid mt-5 ">
+  <div class="col-12 text-center">
+    <h1>Feel the best experience with our luxury car</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-12 text-center parent">
+      <img src="../../assets/images/fav-icon (2).png" alt="fav-icon" width="144PX" height="120PX">
+    
+      <h3>Book with flexibility</h3>
+      <p>Easily find car and book   with no change fees.</p>
+    </div>
+    <div class="col-md-4 col-12 text-center parent">
+      <img src="assets/images/setting icon.png" alt="fav-icon" width="144PX" height="120PX">
+    
+      <h3>Trusted and free </h3>
+      <p>We’re completely free to use – no hidden charges or fees..</p>
+    </div>
+    <div class="col-md-4 col-12 text-center parent">
+      <img src="../../assets/images/fav-icon.png" alt="fav-icon" width="144PX" height="120PX">
+     
+      <h3>We know travel</h3>
+      <p>With 10 years of experience, we're ready to help find your perfect car</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container m-auto banner-form mt-5 mb-5">
+  <div class="row">
+    <div class="col-12">
+      <h1>Become a Driver<br>Your Time.Your Goals.You're The <br>Boss</h1>
+      <h5>Subscribe Join US</h5>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Email">
+        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Next</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="max-width: 312px;" role="document">
+    <div class="modal-content">
+      
+      
+      <div class="text-center modelBackgroundImg" style="background-color: rgba(235, 240, 250, 1) ;height: 200px; border-bottom-left-radius:80% ;border-bottom-right-radius:80% ;"><img  src="../../assets/images/Group.png" alt="logo" height="56px" width="56px">
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title text-center " style="font-size: 20px;">You have Subscribe 
+          Successfully</h4>
+        <p class="text-center" style="font-size: 12px;">Now you will receive the Notification regarding
+          Recent Cars and other Opportunity </p>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" style="width: 100%;">Continue</button>
+      </div>
+      
+    
+    </div>
+  </div>
+</div>

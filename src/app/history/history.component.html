@@ -1,0 +1,158 @@
+<div class="container-fluid main-container">
+  <div class="row">
+    <div class="col history">
+      <h3>History</h3>
+      <p>here you can see the history of rent cars that you used</p>
+    </div>
+  </div>
+  <!---->
+  <div class=" cards">
+    <div class="card-item">
+
+      <div style="display: flex; justify-content: space-between;gap: 20px;flex-wrap: wrap;">
+        <div>
+          <div class="text">
+            <h4>Swift Suzuki 2023 </h4>
+            <p>sports </p>
+          </div><br>
+
+          <div class="car">
+            <img src="../../assets/images/car.png" alt="" width="215px" height="108">
+          </div><br>
+          <div class="card-detail ">
+            <div class="test">
+              <img src="../../assets/images/gas-station.png" alt="gas station">
+              <p>90L</p>
+            </div>
+            <div class="test">
+              <img src="../../assets/images/Car (3).png" alt="manuall">
+              <p>Manual</p>
+            </div>
+            <div class="test">
+              <img src="../../assets/images/profile-2user.png" alt=" seats">
+              <p>4 People</p>
+            </div>
+          </div>
+        </div><!--flex 1-->
+
+        <div class="rerent">
+          <div class="clearfix" style="position: relative;">
+            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#cancelModal">Cancel</a>
+            <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Return</button>
+          </div>
+
+          <h5>London Bridge</h5>
+          <p>Pickup Point</p>
+          <P>-------------------------- <span style="color:rgb(51, 51, 51); font-size: 20px; font-weight: 700;"> 4
+              Days</span> </P>
+          <h5>California</h5>
+          <p>Drop Off</p>
+          <div class="clearfix" style="position: relative;">
+            <p style="float: right;">Price <span style="color:rgb(51, 51, 51); font-size: 25px; font-weight: 700;">
+                $99.00 </span> /day</p>
+          </div>
+        </div><!--flex 2-->
+
+      </div><!--main div flex inside card-->
+    </div><!--card item-->
+
+    <div class="card-item">
+
+      <div style="display: flex; justify-content: space-between;gap: 20px;flex-wrap: wrap;">
+        <div>
+          <div class="text">
+            <h4>Swift Suzuki 2023 </h4>
+            <p>sports </p>
+          </div><br>
+
+          <div class="car">
+            <img src="../../assets/images/car.png" alt="" width="215px" height="108">
+          </div><br>
+          <div class="card-detail ">
+            <div class="test">
+              <img src="../../assets/images/gas-station.png" alt="gas station">
+              <p>90L</p>
+            </div>
+            <div class="test">
+              <img src="../../assets/images/Car (3).png" alt="manuall">
+              <p>Manual</p>
+            </div>
+            <div class="test">
+              <img src="../../assets/images/profile-2user.png" alt=" seats">
+              <p>4 People</p>
+            </div>
+          </div>
+        </div><!--flex 1-->
+
+        <div class="rerent">
+          <div class="clearfix" style="position: relative;">
+            <button class="btn btn-primary">Rerent</button>
+          </div>
+
+          <h5>London Bridge</h5>
+          <p>Pickup Point</p>
+          <P>-------------------------- <span style="color:rgb(51, 51, 51); font-size: 20px; font-weight: 700;"> 4
+              Days</span> </P>
+          <h5>California</h5>
+          <p>Drop Off</p>
+          <div class="clearfix" style="position: relative;">
+            <p style="float: right;">Price <span style="color:rgb(51, 51, 51); font-size: 25px; font-weight: 700;">
+                $99.00 </span> /day</p>
+          </div>
+        </div><!--flex 2-->
+
+      </div><!--main div flex inside card-->
+    </div><!--card item-->
+  </div><!--car main div-->
+
+
+   <!-- The Modal -->
+   <div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <!-- <div class="modal-header">
+             
+              <button type="button" class="close" data-dismiss="modal" style="float: right;">&times;</button>
+          </div> -->
+
+            <!-- Modal Body -->
+            <div class="modal-body text-center pt-5">
+              <h4 >Thank You</h4>
+              <p>Please rate your trip</p>
+             <ngb-rating  [max]="5" ></ngb-rating>
+                <textarea name="" id="" style="width: 80%;" rows="5" placeholder="Write your feedback"></textarea>
+                <button class="btn btn-primary " style="width: 80%;">Send</button>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="modal" id="cancelModal" >
+  <div class="modal-dialog" style="border-radius: 50px;">
+    <div class="modal-content">
+
+      <!-- Modal Body -->
+      <div class="modal-body text-center pt-5">
+        <img src="../../assets/images/Sedan car model.png" alt="Image" width="125px" height="50px">
+        <p style="color: rgba(163, 170, 174, 1);">Are you Sure you want to cancel this order.
+          After Cancel this order you have 2 Warnings 
+          left  after your account will Blocked</p>
+        <div class="row">
+          <button class="btn btn-primary col-6" style="border-radius: 54px; height: 53px; width: 143px;" >yes</button>
+          <button class="btn col-6" data-dismiss="modal">No</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
